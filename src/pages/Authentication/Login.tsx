@@ -19,7 +19,7 @@ export default function Login() {
     <div className="w-full h-screen flex justify-center items-center">
       <div className="flex border border-gray-400 shadow-2xl">
         {/* left */}
-        <div className="px-28 pt-20 bg-[#F8F8F8]">
+        <div className="px-24 pt-20 bg-[#F8F8F8] w-1/2">
           <div
             className="text-4xl font-semibold tracking-wide"
             style={{ textShadow: "2px 2px 8px rgba(0, 0, 0, 0.3)" }}
@@ -27,14 +27,15 @@ export default function Login() {
             WELCOME BACK
           </div>
           <div className="text-[#636364] text-lg py-3">
-            Welcome back! Please enter your details.
+            <p>Welcome back to <span className="font-bold">LynxGuard</span>!</p> 
+            <p>Please enter your details.</p>
           </div>
           <div>
             <LoginForm />
           </div>
         </div>
         {/* right */}
-        <div>
+        <div className="w-1/2">
           <img className="w-full h-full" src={LoginImage} alt="img" />
         </div>
       </div>

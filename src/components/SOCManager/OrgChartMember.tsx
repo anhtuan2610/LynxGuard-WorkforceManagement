@@ -61,7 +61,7 @@ export default function OrgChartMember({ id }: TProps) {
             >
               <img
                 className="absolute w-16 h-16 -top-1/2 rounded-full mb-4 bg-slate-300 overflow-hidden"
-                src="https://bumbeishvili.github.io/avatars/avatars/portrait12.png"
+                src="https://static.vecteezy.com/system/resources/previews/036/744/532/non_2x/user-profile-icon-symbol-template-free-vector.jpg"
                 alt="leader"
               />
               <h3 className="mb-2 font-bold text-xl bg-gradient-to-r from-[#a4c6b8] to-[#5e435d] bg-clip-text text-transparent">
@@ -98,7 +98,7 @@ export default function OrgChartMember({ id }: TProps) {
               >
                 <img
                   className="absolute w-16 h-16 -top-1/2 rounded-full mb-4 bg-slate-300 overflow-hidden"
-                  src={`https://bumbeishvili.github.io/avatars/avatars/portrait85.png`}
+                  src={`https://static.vecteezy.com/system/resources/previews/036/744/532/non_2x/user-profile-icon-symbol-template-free-vector.jpg`}
                 />
                 <h3 className="mb-2 font-bold text-gray-800 text-xl">
                   {item.fullName || `Pentester Name ${index}`}

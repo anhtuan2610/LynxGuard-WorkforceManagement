@@ -62,7 +62,7 @@ const BlogPage: React.FC = () => {
           className="px-4 py-2 text-base font-semibold text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 transform hover:scale-[1.03] transition-all duration-200"
           onClick={showModal}
         >
-          Add New Blog
+          Add New Knowledge
         </button>
       </div>
       <Modal
@@ -161,7 +161,7 @@ const BlogPage: React.FC = () => {
             type="text"
             id="table-search-users"
             className="block py-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
-            placeholder="Search blog by blog name"
+            placeholder="Search Knowledge Sharing by name"
             value={searchString}
             onChange={(e) => setSearchString(e.target.value)}
           />
