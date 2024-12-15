@@ -1,6 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import { getLeaderAssignmentHistory, TAssignmentHistoryData } from "../../services/leader-api";
+import {
+  getLeaderAssignmentHistory,
+  TAssignmentHistoryData,
+} from "../../services/leader-api";
 import Loading from "../../components/Loading";
 import StatusStyle from "../../components/StatusStyle";
 import TaskDetailsModal from "../../components/TaskDetailsModal";
@@ -9,7 +12,8 @@ export default function HistoryAssignedTask() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
   const [selectedTaskId, setSelectedTaskId] = useState<number | null>(null);
-  const [taskDataSelected, setTaskDataSelected] = useState<TAssignmentHistoryData>();
+  const [taskDataSelected, setTaskDataSelected] =
+    useState<TAssignmentHistoryData>();
 
   const { data, isLoading, refetch } = useQuery({
     queryKey: ["fetchAssignmentHistory"],
@@ -241,8 +245,16 @@ export default function HistoryAssignedTask() {
                   </td>
                   <td className="px-4 py-4">
                     <button
-                      className="w-20 px-4 py-2 text-white rounded-lg shadow-md bg-green-500 hover:bg-green-600 focus:ring-2 focus:ring-green-500 flex justify-center"
+                      className={`w-20 px-4 py-2 text-white rounded-lg shadow-md bg-green-500 hover:bg-green-600 focus:ring-2 focus:ring-green-500 flex justify-center ${
+                        (item.task.isReview ||
+                          item.task.statusName != "Completed") &&
+                        "cursor-not-allowed"
+                      }`}
                       onClick={() => openModal(item.task.taskId)}
+                      disabled={
+                        item.task.isReview ||
+                        item.task.statusName != "Completed"
+                      }
                     >
                       {item.task.isReview ? "Reviewed" : "Review"}
                     </button>
